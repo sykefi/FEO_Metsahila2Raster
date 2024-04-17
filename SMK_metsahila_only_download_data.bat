@@ -36,24 +36,24 @@ set STARTTIME=%TIME%
 
 echo "Downloading data"
 :: Muokkaa lokitiedoston polku itsellesi sopivaksi
-echo "Downloading data" > //fs-feo/feo/TP6/SMK/SMK_mestahila_%SUBFILENAME%.log
+echo "Downloading data" >./SMK_mestahila_%SUBFILENAME%.log
 :: Muokkkaa python.exe polku itsellesi sopivaksi sekä aseta smk_metsahila_requestdata_mp.py -skriptin polku vastaamaan sen tallennuspaikkaa
-//fs-feo/feo/kayttajat/eetu/miniconda/envs/coreo/python.exe //fs-feo/feo/TP6/SMK/metsahila/smk_metsahila_requestdata_mp.py
+{polku_python_ymparistoosi}/python.exe ./smk_metsahila_requestdata_mp.py
 
 echo "Extracting zip-files"
 :: Muokkaa lokitiedoston polku itsellesi sopivaksi
-echo "Extracting zip-files" >> //fs-feo/feo/TP6/SMK/SMK_mestahila_%SUBFILENAME%.log
+echo "Extracting zip-files" >>./SMK_mestahila_%SUBFILENAME%.log
 :: Muokkkaa python.exe polku itsellesi sopivaksi sekä aseta smk_metsahila_unzip_files.py -skriptin polku vastaamaan sen tallennuspaikkaa
-//fs-feo/feo/kayttajat/eetu/miniconda/envs/geo_env/python.exe //fs-feo/feo/TP6/SMK/metsahila/smk_metsahila_unzip_files.py
+{polku_python_ymparistoosi}/python.exe./metsahila/smk_metsahila_unzip_files.py
 
 set ENDTIME=%TIME%
 
-echo "Processing completed, please check elapsed time below" >> //fs-feo/feo/TP6/SMK/SMK_mestahila_%SUBFILENAME%.log
+echo "Processing completed, please check elapsed time below" >>./SMK_mestahila_%SUBFILENAME%.log
 
 rem output as time
 :: Muokkaa lokitiedoston polku itsellesi sopivaksi
-echo STARTTIME: %STARTTIME% >> //fs-feo/feo/TP6/SMK/SMK_mestahila_%SUBFILENAME%.log
-echo ENDTIME: %ENDTIME% >> //fs-feo/feo/TP6/SMK/SMK_mestahila_%SUBFILENAME%.log
+echo STARTTIME: %STARTTIME% >>./SMK_mestahila_%SUBFILENAME%.log
+echo ENDTIME: %ENDTIME% >>./SMK_mestahila_%SUBFILENAME%.log
 
 rem convert STARTTIME and ENDTIME to centiseconds
 set /A STARTTIME=(1%STARTTIME:~0,2%-100)*360000 + (1%STARTTIME:~3,2%-100)*6000 + (1%STARTTIME:~6,2%-100)*100 + (1%STARTTIME:~9,2%-100)
@@ -76,5 +76,5 @@ if %DURATIONHS% LSS 10 set DURATIONHS=0%DURATIONHS%
 
 rem outputing
 :: Muokkaa lokitiedoston polku itsellesi sopivaksi
-echo "Elapsed time:" >> //fs-feo/feo/TP6/SMK/SMK_mestahila_%SUBFILENAME%.log
-echo %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS% >> //fs-feo/feo/TP6/SMK/SMK_mestahila_%SUBFILENAME%.log
+echo "Elapsed time:" >>./SMK_mestahila_%SUBFILENAME%.log
+echo %DURATIONH%:%DURATIONM%:%DURATIONS%,%DURATIONHS% >>./SMK_mestahila_%SUBFILENAME%.log
