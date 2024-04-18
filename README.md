@@ -1,4 +1,4 @@
-# FEO-hankkeen TP6:ssa toteutettu Suomen Metsäkeskuksen metsähila-aineistojen rasterointityökalu - Metsähila2Raster¨
+# FEO-hankkeen TP6:ssa toteutettu Suomen Metsäkeskuksen metsähila-aineistojen rasterointityökalu - Metsahila2Raster¨
 
 
 
@@ -27,6 +27,7 @@ proxy_servers:
   https: http://xxxxxxxxxx
 4. Kloonaa tämä repositorio haluamaasi kansioon
 5. Asenna tarvittavat paketit, jos ne eivät vielä löydy python-ympäristöstäsi:
+
         - os
         - requests
         - datetime
@@ -38,6 +39,7 @@ proxy_servers:
         - osgeo
 
 Tekijät: Eetu Jutila & Tom Blom, Suomen Ympäristökeskus, Digipalvelut, Paikkatiedon hallinta
+
 Koodin omistaja: Suomen ympäristökeskus
 
 
