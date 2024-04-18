@@ -16,7 +16,7 @@ Metsähila2Raster työkalu on toteutettu rinnakkaislaskentaa hyödyntävillä Py
     - Aja tämä, jos haluat rasteroida valitsemasi muuttujat valtakunnallisiksi koosteiksi aikaisemmin ladatuista metsähila-aineistoista.
     - Muokkaa Python-ympäristön (python.exe), lokitiedoston ja skriptien polut vastaamaan asennustasi
 
-HUOM! Skriptien ajamiseen tarvitaan paljon RAM-muistia!! Suositeltava laskentakone skriptin ajamiseen: sykelask03 
+HUOM! Skriptien ajamiseen tarvitaan paljon RAM-muistia, joten sitä kannattaa olla käytettävissä vähintään 30 GB  
 
 ## Asennus
 1. Asenna Anaconda3 Software Centeristä
